@@ -949,6 +949,10 @@ class Inbound extends XrayCommonClass {
             }
         }
 
+        if(this.relay) {
+            address = this.relayAddress
+        }
+
         let obj = {
             v: '2',
             ps: remark,
@@ -1090,6 +1094,9 @@ class Inbound extends XrayCommonClass {
 
     genTrojanLink(address='', remark='') {
         let settings = this.settings;
+        if(this.relay) {
+            address = this.relayAddress
+        }
         return `trojan://${settings.clients[0].password}@${address}:${this.port}#${encodeURIComponent(remark)}`;
     }
 
