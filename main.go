@@ -212,7 +212,7 @@ func updateSetting(port int, username string, password string, hostIp string, pu
 		}
 	}
 
-	if publicKey != "" || privateKey != "" {
+	if publicKey != "EMPTY" || privateKey != "EMPTY" {
 		err := settingService.SetCertFile(publicKey)
 		if err != nil {
 			fmt.Println("set public key failed:", err)
