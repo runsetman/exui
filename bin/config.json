@@ -1,0 +1,231 @@
+{
+  "log": null,
+  "routing": {
+    "rules": [
+      {
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "blocked",
+        "type": "field"
+      },
+      {
+        "outboundTag": "blocked",
+        "protocol": [
+          "bittorrent"
+        ],
+        "type": "field"
+      }
+    ]
+  },
+  "dns": null,
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 62789,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "127.0.0.1"
+      },
+      "streamSettings": null,
+      "tag": "api",
+      "sniffing": null
+    },
+    {
+      "listen": null,
+      "port": 12390,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "42610a64-a6be-41f2-e2c7-37d73b894788",
+            "flow": "xtls-rprx-direct"
+          }
+        ],
+        "decryption": "none",
+        "fallbacks": []
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "none",
+        "wsSettings": {
+          "acceptProxyProtocol": false,
+          "path": "/",
+          "headers": {}
+        }
+      },
+      "tag": "inbound-12390",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      }
+    },
+    {
+      "listen": null,
+      "port": 51656,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "35a04da2-98f8-45d9-8eef-2068b87ab232",
+            "flow": "xtls-rprx-direct"
+          }
+        ],
+        "decryption": "none",
+        "fallbacks": []
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "none",
+        "wsSettings": {
+          "acceptProxyProtocol": false,
+          "path": "/",
+          "headers": {}
+        }
+      },
+      "tag": "inbound-51656",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      }
+    },
+    {
+      "listen": null,
+      "port": 15217,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "188031aa-3db4-48c8-b709-e243a3f67e92",
+            "flow": "xtls-rprx-direct"
+          }
+        ],
+        "decryption": "none",
+        "fallbacks": []
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "none",
+        "wsSettings": {
+          "acceptProxyProtocol": false,
+          "path": "/",
+          "headers": {}
+        }
+      },
+      "tag": "inbound-15217",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      }
+    },
+    {
+      "listen": null,
+      "port": 16634,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "5da8ba70-1e80-4f2d-dc3c-095083446a75",
+            "flow": "xtls-rprx-direct"
+          }
+        ],
+        "decryption": "none",
+        "fallbacks": []
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "none",
+        "wsSettings": {
+          "acceptProxyProtocol": false,
+          "path": "/",
+          "headers": {}
+        }
+      },
+      "tag": "inbound-16634",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      }
+    },
+    {
+      "listen": null,
+      "port": 20609,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "137788d4-e06d-489f-f9e7-c4a92e7091f2",
+            "flow": "xtls-rprx-direct"
+          }
+        ],
+        "decryption": "none",
+        "fallbacks": []
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "none",
+        "wsSettings": {
+          "acceptProxyProtocol": false,
+          "path": "/",
+          "headers": {}
+        }
+      },
+      "tag": "inbound-20609",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {},
+      "tag": "blocked"
+    }
+  ],
+  "transport": null,
+  "policy": {
+    "system": {
+      "statsInboundDownlink": true,
+      "statsInboundUplink": true
+    }
+  },
+  "api": {
+    "services": [
+      "HandlerService",
+      "LoggerService",
+      "StatsService"
+    ],
+    "tag": "api"
+  },
+  "stats": {},
+  "reverse": null,
+  "fakeDns": null
+}
