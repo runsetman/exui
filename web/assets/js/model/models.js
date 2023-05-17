@@ -152,7 +152,7 @@ class DBInbound {
             workerHost: this.workerHost,
             workerSni: this.workerSni,
             relay: this.relay,
-            relayAddres: this.relayAddress
+            relayAddress: this.relayAddress
         };
         return Inbound.fromJson(config);
     }

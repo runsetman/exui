@@ -40,28 +40,45 @@
     },
     {
       "listen": null,
-      "port": 12390,
-      "protocol": "vless",
+      "port": 54518,
+      "protocol": "vmess",
       "settings": {
         "clients": [
           {
-            "id": "42610a64-a6be-41f2-e2c7-37d73b894788",
-            "flow": "xtls-rprx-direct"
+            "id": "f6e49de1-83b7-4ce7-f3f8-281fe3671165",
+            "alterId": 0
           }
         ],
-        "decryption": "none",
-        "fallbacks": []
+        "disableInsecureEncryption": false
       },
       "streamSettings": {
-        "network": "ws",
+        "network": "tcp",
         "security": "none",
-        "wsSettings": {
+        "tcpSettings": {
           "acceptProxyProtocol": false,
-          "path": "/",
-          "headers": {}
+          "header": {
+            "type": "http",
+            "request": {
+              "method": "GET",
+              "path": [
+                "/"
+              ],
+              "headers": {
+                "Host": [
+                  "soft98.ir"
+                ]
+              }
+            },
+            "response": {
+              "version": "1.1",
+              "status": "200",
+              "reason": "OK",
+              "headers": {}
+            }
+          }
         }
       },
-      "tag": "inbound-12390",
+      "tag": "inbound-54518",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -72,12 +89,12 @@
     },
     {
       "listen": null,
-      "port": 51656,
+      "port": 24388,
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "35a04da2-98f8-45d9-8eef-2068b87ab232",
+            "id": "4e9c7426-0dc3-4ec4-b1c2-fc7d5e9a57f1",
             "flow": "xtls-rprx-direct"
           }
         ],
@@ -85,15 +102,33 @@
         "fallbacks": []
       },
       "streamSettings": {
-        "network": "ws",
+        "network": "tcp",
         "security": "none",
-        "wsSettings": {
+        "tcpSettings": {
           "acceptProxyProtocol": false,
-          "path": "/",
-          "headers": {}
+          "header": {
+            "type": "http",
+            "request": {
+              "method": "GET",
+              "path": [
+                "/"
+              ],
+              "headers": {
+                "Host": [
+                  "soft98.ir"
+                ]
+              }
+            },
+            "response": {
+              "version": "1.1",
+              "status": "200",
+              "reason": "OK",
+              "headers": {}
+            }
+          }
         }
       },
-      "tag": "inbound-51656",
+      "tag": "inbound-24388",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -104,92 +139,45 @@
     },
     {
       "listen": null,
-      "port": 15217,
-      "protocol": "vless",
+      "port": 26454,
+      "protocol": "vmess",
       "settings": {
         "clients": [
           {
-            "id": "188031aa-3db4-48c8-b709-e243a3f67e92",
-            "flow": "xtls-rprx-direct"
+            "id": "99ca1896-a519-4406-f154-2978baed15e8",
+            "alterId": 0
           }
         ],
-        "decryption": "none",
-        "fallbacks": []
+        "disableInsecureEncryption": false
       },
       "streamSettings": {
-        "network": "ws",
+        "network": "tcp",
         "security": "none",
-        "wsSettings": {
+        "tcpSettings": {
           "acceptProxyProtocol": false,
-          "path": "/",
-          "headers": {}
-        }
-      },
-      "tag": "inbound-15217",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls"
-        ]
-      }
-    },
-    {
-      "listen": null,
-      "port": 16634,
-      "protocol": "vless",
-      "settings": {
-        "clients": [
-          {
-            "id": "5da8ba70-1e80-4f2d-dc3c-095083446a75",
-            "flow": "xtls-rprx-direct"
+          "header": {
+            "type": "http",
+            "request": {
+              "method": "GET",
+              "path": [
+                "/"
+              ],
+              "headers": {
+                "Host": [
+                  "soft98.ir"
+                ]
+              }
+            },
+            "response": {
+              "version": "1.1",
+              "status": "200",
+              "reason": "OK",
+              "headers": {}
+            }
           }
-        ],
-        "decryption": "none",
-        "fallbacks": []
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "none",
-        "wsSettings": {
-          "acceptProxyProtocol": false,
-          "path": "/",
-          "headers": {}
         }
       },
-      "tag": "inbound-16634",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls"
-        ]
-      }
-    },
-    {
-      "listen": null,
-      "port": 20609,
-      "protocol": "vless",
-      "settings": {
-        "clients": [
-          {
-            "id": "137788d4-e06d-489f-f9e7-c4a92e7091f2",
-            "flow": "xtls-rprx-direct"
-          }
-        ],
-        "decryption": "none",
-        "fallbacks": []
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "none",
-        "wsSettings": {
-          "acceptProxyProtocol": false,
-          "path": "/",
-          "headers": {}
-        }
-      },
-      "tag": "inbound-20609",
+      "tag": "inbound-26454",
       "sniffing": {
         "enabled": true,
         "destOverride": [
